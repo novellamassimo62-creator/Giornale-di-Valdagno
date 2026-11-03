@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#102a43">
+    <meta name="description" content="Giornale Valdagno — Carta Vera.">
+    <title>Giornale Valdagno — Carta Vera</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="news.js?v=20261103-images" defer></script>
+    <script src="app.js?v=20261103-images" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+    <header class="site-header">
+      <div class="masthead">
+        <div class="masthead__left">
+          <button class="icon-label menu-toggle" type="button" aria-expanded="false" aria-controls="menu-panel">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            <span>Menu</span>
+          </button>
+          <form class="search-form" role="search">
+            <button class="search-submit" type="submit" aria-label="Cerca">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+            </button>
+            <label class="sr-only" for="site-search">Cerca</label>
+            <input id="site-search" name="q" type="search" placeholder="Cerca" autocomplete="off">
+          </form>
+        </div>
+
+        <a class="brand" href="#/" aria-label="Giornale Valdagno, homepage">
+          <span class="brand__name">GIORNALE <span>VALDAGNO</span></span>
+          <span class="brand__motto">CARTA VERA</span>
+        </a>
+
+        <div class="masthead__right">
+          <button class="text-button login-button" type="button" data-dialog="accesso-dialog">Accedi</button>
+          <button class="subscribe-button" type="button" data-dialog="abbonamento-dialog">Abbonati</button>
+        </div>
+      </div>
+
+      <nav class="category-nav" aria-label="Categorie">
+        <div class="category-nav__inner" id="category-nav"></div>
+      </nav>
+
+      <div class="menu-panel" id="menu-panel" hidden>
+        <div class="menu-panel__inner">
+          <p class="menu-panel__eyebrow">Esplora</p>
+          <div class="menu-panel__links" id="menu-links"></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenuto" class="page-shell">
+      <div class="page-grid">
+        <div class="lead-story" id="page-content"></div>
+
+        <aside class="sidebar" aria-label="Contenuti in evidenza">
+          <section class="most-read">
+            <div class="sidebar-heading">
+              <h2>Le più lette</h2>
+              <span aria-hidden="true"></span>
+            </div>
+            <ol class="popular-list" id="popular-list"></ol>
+          </section>
+
+          <section class="newsletter">
+            <div class="newsletter__brand">
+              <span class="newsletter__name">GIORNALE<br>VALDAGNO</span>
+              <span class="newsletter__motto">CARTA VERA</span>
+            </div>
+            <div class="newsletter__copy" aria-hidden="true"><span></span><span></span></div>
+            <button class="newsletter__button" type="button" data-dialog="newsletter-dialog">Iscriviti</button>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#/">GIORNALE VALDAGNO <span>— CARTA VERA</span></a>
+      <span class="footer-note">Informazione locale</span>
+    </footer>
+
+    <p class="sr-only" id="live-status" aria-live="polite"></p>
+
+    <dialog class="site-dialog" id="accesso-dialog" aria-labelledby="accesso-title">
+      <button class="dialog-close" type="button" aria-label="Chiudi">×</button>
+      <p class="dialog-kicker">Giornale Valdagno</p>
+      <h2 id="accesso-title">Area lettori</h2>
+      <p>Il servizio sarà disponibile prossimamente.</p>
+    </dialog>
+    <dialog class="site-dialog" id="abbonamento-dialog" aria-labelledby="abbonamento-title">
+      <button class="dialog-close" type="button" aria-label="Chiudi">×</button>
+      <p class="dialog-kicker">Giornale Valdagno</p>
+      <h2 id="abbonamento-title">Abbonamenti</h2>
+      <p>Il servizio sarà disponibile prossimamente.</p>
+    </dialog>
+    <dialog class="site-dialog" id="commenti-dialog" aria-labelledby="commenti-title">
+      <button class="dialog-close" type="button" aria-label="Chiudi">×</button>
+      <p class="dialog-kicker">Giornale Valdagno</p>
+      <h2 id="commenti-title">Commenti</h2>
+      <p>Non ci sono ancora commenti.</p>
+    </dialog>
+    <dialog class="site-dialog" id="newsletter-dialog" aria-labelledby="newsletter-title">
+      <button class="dialog-close" type="button" aria-label="Chiudi">×</button>
+      <p class="dialog-kicker">Giornale Valdagno</p>
+      <h2 id="newsletter-title">Newsletter</h2>
+      <p>Il servizio sarà disponibile prossimamente.</p>
+    </dialog>
+  </body>
+</html>
